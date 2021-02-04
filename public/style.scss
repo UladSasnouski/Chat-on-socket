@@ -1,0 +1,158 @@
+/**
+ * Сброс стилей у кнопки.
+ * Придётся немного поработать, чтобы получить нейтральный вид.
+*/
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    /* отображаем курсор в виде руки при наведении; некоторые
+    считают, что необходимо оставлять стрелочный вид для кнопок */
+    cursor: pointer;
+}
+button,
+button:active,
+button:focus {
+    outline: none !important;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 90%;
+    width: 99%;
+}
+
+body {
+    margin: 5px;
+    height: 100%;
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    font-family: "Comfortaa", sans-serif;
+    margin: 0px;
+}
+
+div#change_username {
+    min-width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(212, 217, 230, 0.2);
+}
+
+section#chatroom {
+    border: 3px solid rgb(101, 90, 255);
+    height: 85%;
+    overflow: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+section#input_zone {
+    display: flex;
+    text-align: center;
+    background-color: rgba(94, 120, 182, 0.3);
+    padding: 10px 40px 10px 40px;
+    border-bottom: 3px solid rgb(101, 90, 255);
+    border-left: 3px solid rgb(101, 90, 255);
+    border-right: 3px solid rgb(101, 90, 255);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+input {
+    font-family: "Comfortaa", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    background-color: rgba(212, 217, 230, 0.2);
+}
+
+input#message {
+    border-radius: 10px;
+    margin-left: 50px;
+    min-width: 400px;
+    height: 50%;
+    font-family: "Comfortaa", sans-serif;
+}
+input#username {
+    border-radius: 10px;
+    min-width: 200px;
+    height: 50%;
+    font-family: "Comfortaa", sans-serif;
+}
+
+.alert {
+    padding: 10px;
+    margin: 12px;
+    width: auto;
+}
+
+p.message {
+    margin: 0px;
+    width: 100%;
+    height: 40px;
+    font-size: 2vh;
+    font-family: "Comfortaa", sans-serif;
+    padding: 1vh;
+}
+
+.message:nth-child(even) {
+    background-color: rgb(87, 113, 230);
+}
+
+.message:nth-child(odd) {
+    background-color: rgb(87, 113, 230);
+}
+
+.shine-button {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 30px;
+    margin: 10px 20px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #222e3a;
+    border-radius: 8px;
+    font-family: "Montserrat", sans-serif;
+    color: #15314d;
+    transition: 0.2s ease-in-out;
+}
+.shine-button:before {
+    content: "";
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.5));
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: -8px;
+    left: -75px;
+    transform: skewX(-45deg);
+}
+.shine-button:hover {
+    background: #15314d;
+    color: #fff;
+}
+.shine-button:hover:before {
+    left: 150px;
+    transition: 0.5s ease-in-out;
+}
+
+.send-m {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
